@@ -1,0 +1,10 @@
+[
+    {
+        "py/object": "puresite.Site",
+        "api_key": "<YOUR_API_KEY",
+        "name": "<YOUR_PURE_NAME>",
+        "pure_url": "<YOUR_PURE_URL>",
+        "root_org": "<YOUR_ROOT_ORG_ID>",
+        "url": "<YOUR_DATA_PURL>"
+    }
+]
