@@ -16,7 +16,6 @@ class Site(object):
 
 # Utility class load/save objects to disk
 class Serializer:
-
 	# Serialize dictionary to disk, e.g. for person matches
 	def save(self, obj, name):
 		with open(name + '.json', 'w') as f: 

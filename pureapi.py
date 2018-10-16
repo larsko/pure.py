@@ -1,4 +1,3 @@
-
 import requests
 import json
 import lxml.etree as ET
