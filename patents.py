@@ -2,7 +2,6 @@
 import lxml.etree as ET
 from dateutil import parser
 from puresite import *
-
 import requests
 
 # TODO: Create  external inventors
@@ -97,6 +96,5 @@ def transform(site):
 
 	# Save transformed XML file
 	transformed.write(xml_output_filename, pretty_print = True, xml_declaration = True, encoding = "utf-8")
-
 
 main()
