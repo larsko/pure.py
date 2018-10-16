@@ -1,0 +1,5 @@
+jsonpickle==1.0
+lxml==4.2.1
+python-dateutil==2.6.1
+requests==2.18.4
+
