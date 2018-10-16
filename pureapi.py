@@ -15,7 +15,6 @@ class PureAPI:
 
 	# Makes Pure API request and return
 	def request(self, endpoint, parameters = {}, accept = "application/json"):
-
 		headers = {
 			"Accept": accept, 
 			"api-key": self.site.api_key
@@ -36,5 +35,5 @@ class PureAPI:
 
 		if response.status_code is 200:
 			return ET.fromstring(response.content).xpath("//version")[0].text
-		else:
-			raise Exception("HTTP error {0}. Please check if {1} is accessible.".format(response.status_code,url))
+		#else:
+		#	raise Exception("HTTP error {0}. Please check if {1} is accessible.".format(response.status_code,url))
