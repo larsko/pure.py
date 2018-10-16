@@ -26,7 +26,9 @@ def get_patents(site):
 	print("Saving XML from {0}...".format(site.url))
 	save_file(requests.get(site.url), '.', site.name)
 	
-	match_persons(site)
+	# Resolve inventor names and save if not done yet.
+	if not PersonResolver(site).load_matches():
+		match_persons(site)
 
 	print("Transforming XML {0}.xml to {0}_out.xml...".format(site.name))
 	transform(site)
