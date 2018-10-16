@@ -1,6 +1,5 @@
 import os
 from pureapi import PureAPI
-# to load sites form disk
 import jsonpickle
 import json
 

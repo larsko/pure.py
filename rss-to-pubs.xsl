@@ -7,7 +7,7 @@
 
 <xsl:output method="xml" indent="yes" />
 
-<!-- Passing this from Python! -->
+<!-- Passing this from Python -->
 <xsl:param name="root_org"/>
 <xsl:param name="site"/>
 
@@ -18,11 +18,8 @@
 <!-- Root publications element -->
 <xsl:template match="rss/channel">
 <publications xmlns="v1.publication-import.base-uk.pure.atira.dk" xmlns:commons="v3.commons.pure.atira.dk">
-
 		<xsl:comment>Pub Date: <xsl:value-of select="pubDate" /></xsl:comment>
-
 		<xsl:apply-templates select="item" />
-
 	</publications>
 
 </xsl:template>
@@ -162,9 +159,8 @@
 			</xsl:otherwise>
 		</xsl:choose>		
 	</commons:text>
-
+	
 </xsl:template>
-
 
 <!-- recursive funtion to build keywords - python might be easier to use instead... -->
 <xsl:template name="split-keywords">
@@ -187,6 +183,5 @@
     </xsl:call-template>
   </xsl:if>
 </xsl:template>
-
 
 </xsl:transform>
