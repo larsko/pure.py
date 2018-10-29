@@ -1,6 +1,8 @@
 # pure.py
 A set of Python tools to make help transform and data for Pure.
 
+*Disclaimer:* This code is provided "as-is" for educational purposes under the MIT license and should in no way be considered production-ready code. The author is not obligated to maintain, fix or otherwise provide technical support to end-users. Please refer to the license for more details. 
+
 Tools:
 - *patents.py* Python script to harvest Inteum patents and convert them to XML according to the publications.xsd used in the Pure bulk XML import wizard. 
 - *pureapi.py* A simple wrapper for the Pure API. Will default to the latest Pure API version if nothing else is specified.
