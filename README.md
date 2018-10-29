@@ -50,3 +50,6 @@ Each match will be added to a dictionary and saved to a JSON file "<YOUR_PURE_NA
 {"John;Doe": "7213cfd7abac1973c9d018a3fb1022f3"}
 ```
 Matches are used by the XSLT to enrich persons with an internal ID using an extension function `python:lookup_person`.
+
+### Contributors
+- Lars K Oestergaard
