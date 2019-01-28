@@ -11,7 +11,7 @@ import requests
 # Main entry point
 def main():	
 
-	sites = Serializer().load("sites")
+	sites = Serializer().load("njeda")
 
 	for site in sites:
 		get_patents(site)
