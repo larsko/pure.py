@@ -14,10 +14,8 @@ def main():
 
 	sites = Serializer().load("njeda")
 
-	#for site in sites:
-	#	get_patents(site)
-
-	get_patents(sites[0])
+	for site in sites:
+		get_patents(site)
 
 # Downloads Inteum patents from a site
 def get_patents(site):
