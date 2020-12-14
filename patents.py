@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 # Main entry point
 def main():	
 
-	sites = Serializer().load("njeda")
+	sites = Serializer().load("sites")
 
 	for site in sites:
 		get_patents(site)
