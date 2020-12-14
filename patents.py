@@ -3,6 +3,7 @@ import lxml.etree as ET
 from dateutil import parser
 from puresite import *
 import requests
+from bs4 import BeautifulSoup
 
 # TODO: Create  external inventors
 # TODO: get root Org dynamically from Pure API, if desired...
@@ -13,8 +14,10 @@ def main():
 
 	sites = Serializer().load("njeda")
 
-	for site in sites:
-		get_patents(site)
+	#for site in sites:
+	#	get_patents(site)
+
+	get_patents(sites[0])
 
 # Downloads Inteum patents from a site
 def get_patents(site):
@@ -72,6 +75,12 @@ def get_date(context, s, component):
 	dt = parser.parse(s)
 	return dt.strftime("%{0}".format(component))
 
+# Tidies up HTML contents
+def clean_html(context, s):
+	tree = BeautifulSoup(s, "html.parser")
+	return tree.prettify(formatter='html')	
+
+# Transforms XML from RSS feed to Pure XML
 def transform(site):
 	# get files for particular site
 	xml_filename = site.name + ".xml"
@@ -86,6 +95,7 @@ def transform(site):
 	ns = ET.FunctionNamespace("python")
 	ns['get_date'] = get_date
 	ns['lookup_person'] = pr.lookup_person
+	ns['clean_html'] = clean_html
 
 	# Transform XML
 	xml = ET.parse(xml_filename)

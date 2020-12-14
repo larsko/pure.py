@@ -27,7 +27,7 @@
 <!-- Matches each patent with an item element -->
 <xsl:template match="item">
 	
-	<patent id="{guid}" subType="patent">
+	<patent id="{guid}" subType="innovation">
 		<peerReviewed>false</peerReviewed>
 
 		<!--TODO: Parsing date into components using Python, see patents.py for details -->
@@ -60,7 +60,7 @@
 			<xsl:call-template name="text">
 				<xsl:with-param name="escape" select="'yes'"/>
 				<xsl:with-param name="val">	
-			<xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text><xsl:value-of select="description" disable-output-escaping="yes" /><xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>	
+			<xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text><xsl:value-of select="python:clean_html(string(description))" disable-output-escaping="no" /><xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>	
 				</xsl:with-param>
 			</xsl:call-template>
 		</abstract>
