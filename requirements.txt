@@ -1,4 +1,5 @@
-lxml==4.2.1
-requests==2.21.0
-jsonpickle==1.0
-python_dateutil==2.7.3
+lxml==4.5.0
+jsonpickle==1.4.2
+requests==2.23.0
+beautifulsoup4==4.9.3
+python_dateutil==2.8.1
