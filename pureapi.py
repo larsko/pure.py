@@ -26,7 +26,7 @@ class PureAPI:
 		if response.status_code is 200:
 			return json.loads(response.content)	
 		else:
-			print("Error! " + response.status_code)
+			print("Error! {0}".format(response.status_code))
 
 	# gets the API version
 	def get_latest_version(self):

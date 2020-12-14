@@ -66,5 +66,7 @@ Each match will be added to a dictionary and saved to a JSON file "<YOUR_PURE_NA
 ```
 Matches are used by the XSLT to enrich persons with an internal ID using an extension function `python:lookup_person`.
 
+Any matches will be saved to a file called <YOUR_PURE_NAME>.json. To force re-matching, simply delete the file and re-run the script.
+
 ### Contributors
 - Lars K Oestergaard
