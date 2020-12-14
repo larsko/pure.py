@@ -32,6 +32,21 @@ The script supports harvesting multiple sites. Simply add these to the sites.jso
     }
 ]
 ```
+
+Example:
+```javascript
+[
+    {
+        "py/object": "puresite.Site",
+        "api_key": "xxxxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "name": "my_name",
+        "pure_url": "https://mypure.elsevierpure.com",
+        "root_org": "my_root_org_source_id",
+        "url": "http://my_inteum_site.technologypublisher.com/RssDataFeed.aspx?UpdateOnOrAfter=1/1/2010"
+    }
+]
+```
+
 ### Transforming Inteum RSS 2.0 to Publications
 See `rss-to-pubs.xsl` for a stylesheet that converts the XML to be ingested by Pure. Note that parameters are passed from Python, hence the transformation will not be complete when run outside of `patents.py`.
 
