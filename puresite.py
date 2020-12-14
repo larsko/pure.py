@@ -29,7 +29,7 @@ class Serializer:
 
 # Resolves person IDs using the Pure API based on Lucene query
 class PersonResolver:
-	def __init__(self, site, fallback_api = '512'):
+	def __init__(self, site, fallback_api = '519'):
 		self.site = site
 		self.api = PureAPI(site, fallback_api)
 		self.matches = {}
