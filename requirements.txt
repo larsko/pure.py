@@ -1,4 +1,4 @@
-lxml==4.5.0
+lxml==4.6.5
 jsonpickle==1.4.2
 requests==2.23.0
 beautifulsoup4==4.9.3
